@@ -1,0 +1,122 @@
+[
+  {
+    "id": "heading",
+    "type": "wysiwyg"
+  },
+  {
+    "id": "block_type",
+    "type": "select",
+    "choices": [
+      { "automatic": "Automatic" },
+      { "manual": "Manual" }
+    ]
+  },
+  {
+    "id": "post_type",
+    "type": "post_type",
+    "label": "Post Type",
+    "conditional_logic": [
+      [
+        {
+          "field": "block_type",
+          "operator": "==",
+          "value": "automatic"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "category",
+    "type": "taxonomy",
+    "taxonomy": "category",
+    "conditional_logic": [
+      [
+        {
+          "field": "block_type",
+          "operator": "==",
+          "value": "automatic"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "tag",
+    "type": "taxonomy",
+    "taxonomy": "post_tag",
+    "conditional_logic": [
+      [
+        {
+          "field": "block_type",
+          "operator": "==",
+          "value": "automatic"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "number_posts",
+    "type": "number",
+    "label": "Number of posts",
+    "min": 0,
+    "default_value": 6,
+    "instructions": "Set to 0 to show all posts",
+    "conditional_logic": [
+      [
+        {
+          "field": "block_type",
+          "operator": "==",
+          "value": "automatic"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "featured_posts",
+    "type": "relationship",
+    "filters": [ "search", "post_type", "taxonomy" ],
+    "return_format": "ids",
+    "conditional_logic": [
+      [
+        {
+          "field": "block_type",
+          "operator": "==",
+          "value": "manual"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "button",
+    "type": "link"
+  },
+  {
+    "id": "slides_to_show",
+    "type": "number",
+    "default_value": 1,
+    "min": 1,
+    "max": 5,
+    "step": 0.1
+  },
+  {
+    "id": "top_spacer",
+    "type": "select",
+    "choices": [
+      { "xl": "Large" },
+      { "lg": "Medium" },
+      { "md": "Small" },
+      { "0": "None" }
+    ],
+    "default_value": "xl"
+  },
+  {
+    "id": "bottom_spacer",
+    "type": "select",
+    "choices": [
+      { "xl": "Large" },
+      { "lg": "Medium" },
+      { "md": "Small" },
+      { "0": "None" }
+    ],
+    "default_value": "xl"
+  }
+]

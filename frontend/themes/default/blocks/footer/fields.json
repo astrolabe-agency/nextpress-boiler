@@ -1,0 +1,50 @@
+[
+  {
+    "id": "logo",
+    "type": "image"
+  },
+  {
+    "id": "style",
+    "type": "select",
+    "choices": [
+      { "solid": "Solid" },
+      { "image": "Image" }
+    ],
+    "default_value": "image"
+  },
+  {
+    "id": "background_image",
+    "type": "image",
+    "conditional_logic": [
+      [
+        {
+          "field": "style",
+          "operator": "==",
+          "value": "image"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "background_colour",
+    "type": "color_picker",
+    "conditional_logic": [
+      [
+        {
+          "field": "style",
+          "operator": "==",
+          "value": "solid"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "footer_nav",
+    "type": "nav"
+  },
+  {
+    "id": "copyright",
+    "type": "textarea",
+    "new_line": "wpautop"
+  }
+]

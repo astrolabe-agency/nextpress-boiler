@@ -1,0 +1,10 @@
+[
+  {
+    "id": "logo",
+    "type": "image"
+  },
+  {
+    "id": "header_nav",
+    "type": "nav"
+  }
+]
