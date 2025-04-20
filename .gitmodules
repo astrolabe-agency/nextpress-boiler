@@ -1,0 +1,8 @@
+[submodule "backend/wordpress/wp-content/plugins/nextpress"]
+	path = backend/wordpress/wp-content/plugins/nextpress
+	url = https://github.com/astrolabe-agency/nextpress
+	branch = main
+[submodule "frontend/src"]
+	path = frontend/src
+	url = https://github.com/astrolabe-agency/nextpress-frontend-src
+	branch = main
